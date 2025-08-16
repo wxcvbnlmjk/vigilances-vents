@@ -1,0 +1,35 @@
+version: '3.8'
+
+services:
+  meteo-app:
+    build: .
+    ports:
+      - "80:80"
+    environment:
+      - NODE_ENV=production
+    restart: unless-stopped
+    networks:
+      - meteo-network
+
+  # Service de développement (optionnel)
+  meteo-dev:
+    build: .
+    ports:
+      - "3000:3000"
+    environment:
+      - NODE_ENV=development
+    volumes:
+      - .:/app
+      - /app/node_modules
+    command: npm run dev
+    profiles:
+      - dev
+    networks:
+      - meteo-network
+
+networks:
+  meteo-network:
+    driver: bridge
+
+volumes:
+  node_modules:

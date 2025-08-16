@@ -1,0 +1,59 @@
+{
+  "results": [
+    {
+      "domain_id": "75",
+      "echeance": "J",
+      "phenomenon_id": 1,
+      "phenomenon": "Vent violent",
+      "color_id": 2,
+      "color": "Orange",
+      "begin_time": "2024-01-15T00:00:00Z",
+      "end_time": "2024-01-15T23:59:59Z",
+      "product_datetime": "2024-01-14T16:00:00Z"
+    },
+    {
+      "domain_id": "13",
+      "echeance": "J",
+      "phenomenon_id": 2,
+      "phenomenon": "Pluie-inondation",
+      "color_id": 3,
+      "color": "Rouge",
+      "begin_time": "2024-01-15T00:00:00Z",
+      "end_time": "2024-01-15T23:59:59Z",
+      "product_datetime": "2024-01-14T16:00:00Z"
+    },
+    {
+      "domain_id": "06",
+      "echeance": "J",
+      "phenomenon_id": 3,
+      "phenomenon": "Orages",
+      "color_id": 2,
+      "color": "Orange",
+      "begin_time": "2024-01-15T00:00:00Z",
+      "end_time": "2024-01-15T23:59:59Z",
+      "product_datetime": "2024-01-14T16:00:00Z"
+    },
+    {
+      "domain_id": "34",
+      "echeance": "J",
+      "phenomenon_id": 4,
+      "phenomenon": "Inondation",
+      "color_id": 1,
+      "color": "Jaune",
+      "begin_time": "2024-01-15T00:00:00Z",
+      "end_time": "2024-01-15T23:59:59Z",
+      "product_datetime": "2024-01-14T16:00:00Z"
+    },
+    {
+      "domain_id": "29",
+      "echeance": "J",
+      "phenomenon_id": 5,
+      "phenomenon": "Vagues-submersion",
+      "color_id": 2,
+      "color": "Orange",
+      "begin_time": "2024-01-15T00:00:00Z",
+      "end_time": "2024-01-15T23:59:59Z",
+      "product_datetime": "2024-01-14T16:00:00Z"
+    }
+  ]
+}

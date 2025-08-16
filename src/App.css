@@ -1,0 +1,23 @@
+/* Styles spécifiques à l'application App.tsx */
+/* Les styles principaux sont dans index.css */
+
+/* Styles pour les cartes */
+.wind-map-container,
+.vigilance-map-container {
+  width: 100%;
+  height: 100%;
+  position: relative;
+}
+
+/* Styles pour les onglets */
+.tab-container {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.tab-content {
+  flex: 1;
+  overflow: hidden;
+}

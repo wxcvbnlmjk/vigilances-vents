@@ -1,0 +1,64 @@
+body {
+  margin: 0;
+  min-width: 320px;
+  min-height: 100vh;
+}
+
+/* Styles pour Leaflet */
+.leaflet-container {
+  width: 100%;
+  height: 100%;
+}
+
+.leaflet-control-container {
+  z-index: 1;
+}
+
+/* Styles pour les popups de vigilance */
+.vigilance-popup .leaflet-popup-content-wrapper {
+  border-radius: 0.5rem;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.vigilance-popup .leaflet-popup-content {
+  margin: 0;
+  line-height: 1.4;
+}
+
+.vigilance-popup .leaflet-popup-tip-container {
+  margin-top: -1px;
+}
+
+/* Styles spécifiques au mode sombre pour la carte */
+[data-theme='dark'] .leaflet-tile {
+  filter: brightness(0.6) invert(1) contrast(3) hue-rotate(200deg) saturate(0.3) brightness(0.7);
+}
+
+[data-theme='dark'] .leaflet-container {
+  background: #303030;
+}
+
+/* Styles pour les popups en mode sombre */
+[data-theme='dark'] .vigilance-popup .leaflet-popup-content-wrapper {
+  background-color: #2a2a2a;
+  color: #ffffff;
+}
+
+[data-theme='dark'] .vigilance-popup .leaflet-popup-tip {
+  background-color: #2a2a2a;
+}
+
+[data-theme='dark'] .text-gray-600 {
+  color: #9ca3af;
+}
+
+/* Styles pour les conteneurs d'icônes de vigilance */
+.vigilance-icon-container {
+  background-color: transparent;
+  border: none;
+}
+
+/* Applique un mode de fusion pour rendre le fond blanc des pictogrammes transparent */
+.vigilance-pictogram-icon {
+  mix-blend-mode: multiply;
+}
