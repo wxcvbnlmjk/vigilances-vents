@@ -13,6 +13,7 @@ const FR_BBOX = { top: 51.1, bottom: 41.3, left: -5.5, right: 9.8 }
 const FR_CENTER: [number, number] = [46.6, 2.2]
 const NX = 8
 const NY = 8
+let dateMaj: Date | null = null
 
 function buildGrid(
   nx: number,
@@ -69,6 +70,7 @@ async function fetchWindData(
     const cached = localStorage.getItem(cacheKey)
     if (cached) {
       const parsed = JSON.parse(cached)
+      dateMaj = new Date(parsed.hourKey)
       if (parsed && parsed.ts && parsed.windData) {
         // Utiliser les données du localStorage si elles existent
         console.log('Données récupérées du localStorage:', cacheKey)
@@ -91,6 +93,7 @@ async function fetchWindData(
   let currentNY = ny
   let attempts = 0
   let json: any = null
+
   let lastGrid: { lats: number[]; lons: number[]; dx: number; dy: number } | null = null
 
   const sleep = (ms: number) => new Promise((r) => setTimeout(r, ms))
@@ -233,6 +236,7 @@ async function fetchWindData(
       hourKey,
       createdAt: new Date().toISOString()
     }
+    dateMaj = new Date(cacheData.hourKey)
     localStorage.setItem(cacheKey, JSON.stringify(cacheData))
     console.log('Données sauvegardées dans le localStorage:', cacheKey)
   } catch (error) {
@@ -557,13 +561,13 @@ function MapWithVelocity() {
         zIndex: 1000
       }}>
         <a 
-          href="https://github.com/wxcvbnlmjk/vents" 
+          href="https://github.com/wxcvbnlmjk/vigilances-vents" 
           target="_blank" 
           rel="noopener noreferrer"
           style={{ textDecoration: 'none' }}
         >
           <img 
-            src="https://img.shields.io/github/last-commit/wxcvbnlmjk/vents" 
+            src="https://img.shields.io/github/last-commit/wxcvbnlmjk/vigilances-vents" 
             alt="Last commit"
             style={{
               height: '20px',
@@ -573,7 +577,7 @@ function MapWithVelocity() {
         </a>
 
       </div>
-            {/* Badge GitHub */}
+          
       <div style={{
         position: 'relative',
         textAlign:'left',
@@ -596,6 +600,26 @@ function MapWithVelocity() {
             }}
           />
         </a>
+ 
+        <img 
+          src={ "https://img.shields.io/badge/" +  
+            
+            dateMaj?.toLocaleDateString("fr-FR", {
+              weekday: "long",   // jour de la semaine
+              year: "numeric",
+              month: "long",
+              day: "numeric",
+            })
+            +
+            "-red" }
+          alt="date données"
+          style={{
+            height: '20px',
+            marginLeft: '5px',
+            width: 'auto'
+          }}
+        />
+       
       </div>
 
     </div>

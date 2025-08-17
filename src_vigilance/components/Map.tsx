@@ -313,13 +313,13 @@ export function Map({ vigilances }: MapProps) {
         }}
       >
         <a 
-          href="https://github.com/wxcvbnlmjk/vigilance-meteo" 
+          href="https://github.com/wxcvbnlmjk/vigilances-vents" 
           target="_blank" 
           rel="noopener noreferrer"
           style={{ textDecoration: 'none' }}
         >
           <img 
-            src="https://img.shields.io/github/last-commit/wxcvbnlmjk/vigilance-meteo" 
+            src="https://img.shields.io/github/last-commit/wxcvbnlmjk/vigilances-vents" 
             alt="Dernier commit GitHub"
             style={{ display: 'block' }}
           />

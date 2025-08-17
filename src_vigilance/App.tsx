@@ -284,6 +284,22 @@ function App() {
 
               <select 
                 className="select select-bordered w-full h-8 text-sm"
+                value={filters.phenomenonType || ''}
+                onChange={handlePhenomenonChange}
+              >
+                <option value="">Tous les types de vigilance</option>
+                {uniquePhenomena.map(phenomenon => (
+                  <option key={phenomenon.id} value={phenomenon.id}>
+                    {phenomenon.name}
+                  </option>
+                ))}
+              </select>
+            </div>
+            
+            <div className="form-control  ">
+
+              <select 
+                className="select select-bordered w-full h-8 text-sm"
                 value={filters.department || ''}
                 onChange={handleDepartmentChange}
               >
@@ -296,21 +312,6 @@ function App() {
               </select>
             </div>
 
-            <div className="form-control  ">
-
-              <select 
-                className="select select-bordered w-full h-8 text-sm"
-                value={filters.phenomenonType || ''}
-                onChange={handlePhenomenonChange}
-              >
-                <option value="">Tous les types</option>
-                {uniquePhenomena.map(phenomenon => (
-                  <option key={phenomenon.id} value={phenomenon.id}>
-                    {phenomenon.name}
-                  </option>
-                ))}
-              </select>
-            </div>
           </div>
 
           {/* Carte */}
