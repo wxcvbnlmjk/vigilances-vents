@@ -50,12 +50,12 @@ html, body, #root {
 
 /* Mode nuit styles */
 .dark-mode {
-  background-color: #1a1a1a;
+  background-color: #0F172A;
   color: #ffffff;
 }
 
 .dark-mode .toolbar {
-  background: #2d2d2d;
+  background: #0F172A;
   border-bottom: 1px solid #404040;
   color: #ffffff;
 }
@@ -65,7 +65,7 @@ html, body, #root {
 }
 
 .dark-mode input[type="range"] {
-  background: #404040;
+  background: #0F172A;
 }
 
 .dark-mode input[type="range"]::-webkit-slider-thumb {
@@ -99,11 +99,11 @@ html, body, #root {
 
 .dark-mode .theme-toggle {
   border-color: #404040;
-  background: #404040;
+  background: #0F172A;
 }
 
 .dark-mode .theme-toggle:hover {
-  background: #505050;
+  background: #0F172A;
   border-color: #505050;
 }
 
@@ -126,7 +126,7 @@ html, body, #root {
 }
 
 .dark-mode .clear-cache-btn {
-  background: #404040;
+  background: #1E293B;
   color: #ffffff;
   border-color: #505050;
 }
@@ -162,7 +162,7 @@ html, body, #root {
 }
 
 [data-theme='dark'] .leaflet-container {
-  background: #303030;
+  background: #0F172A;
 }
 
 /* Styles spécifiques au mode sombre pour la carte (alternative avec classe) */
@@ -171,5 +171,5 @@ html, body, #root {
 }
 
 .dark-mode .leaflet-container {
-  background: #303030;
+  background: #0F172A;
 }

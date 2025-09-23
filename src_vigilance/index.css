@@ -35,17 +35,17 @@ body {
 }
 
 [data-theme='dark'] .leaflet-container {
-  background: #303030;
+  background: #0F172A;
 }
 
 /* Styles pour les popups en mode sombre */
 [data-theme='dark'] .vigilance-popup .leaflet-popup-content-wrapper {
-  background-color: #2a2a2a;
+  background-color: #0F172A;
   color: #ffffff;
 }
 
 [data-theme='dark'] .vigilance-popup .leaflet-popup-tip {
-  background-color: #2a2a2a;
+  background-color: #0F172A;
 }
 
 [data-theme='dark'] .text-gray-600 {

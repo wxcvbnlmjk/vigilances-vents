@@ -9,6 +9,9 @@ export function ThemeToggle() {
     const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
     const initialTheme = savedTheme || (prefersDark ? 'dark' : 'light');
     setTheme(initialTheme);
+    if (savedTheme === null){
+      localStorage.setItem('theme', initialTheme);
+    } 
     document.documentElement.setAttribute('data-theme', initialTheme);
   }, []);
 
